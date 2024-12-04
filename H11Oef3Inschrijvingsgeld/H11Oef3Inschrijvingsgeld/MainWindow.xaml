@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H11Oef3Inschrijvingsgeld"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
+        <Label Content="Naam student: " HorizontalAlignment="Left" Height="33" Margin="28,35,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Content="Opleiding:" HorizontalAlignment="Left" Height="33" Margin="28,91,0,0" VerticalAlignment="Top" Width="91"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="33" Margin="163,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <ComboBox x:Name="educationComboBox" HorizontalAlignment="Left" Height="36" Margin="163,88,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="educationComboBox_SelectionChanged"/>
+        <CheckBox x:Name="noWorkCheckBox" Content="Werkzoekend" HorizontalAlignment="Left" Margin="28,154,0,0" VerticalAlignment="Top" Width="101" Unchecked="noWorkCheckBox_CheckedOrUnchecked" Checked="noWorkCheckBox_CheckedOrUnchecked"/>
+        <Label Content="Hoogst behaalde diploma" HorizontalAlignment="Left" Margin="28,202,0,0" VerticalAlignment="Top" Width="157" FontStyle="Italic" FontWeight="Bold"/>
+        <RadioButton x:Name="graduateRadioButton" Content="Graduaat" HorizontalAlignment="Left" Margin="36,258,0,0" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+        <RadioButton x:Name="masterRadioButton" Content="Master" HorizontalAlignment="Left" Margin="36,298,0,0" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+        <RadioButton x:Name="bachelorRadioButton" Content="Bachelor" HorizontalAlignment="Left" Margin="36,278,0,0" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+        <RadioButton x:Name="secondaryRadioButton" Content="Hoger secundair" HorizontalAlignment="Left" Margin="36,238,0,0" VerticalAlignment="Top" Checked="radioButton_Checked"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Margin="207,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="111"/>
+        <Button x:Name="calculateButton" Content="Bereken" HorizontalAlignment="Left" Margin="400,35,0,0" VerticalAlignment="Top" Width="124" Height="33" Click="calculateButton_Click"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="400,129,0,0" VerticalAlignment="Top" Width="124" Height="33" Click="closeButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="400,82,0,0" VerticalAlignment="Top" Width="124" Height="33" Click="clearButton_Click"/>
 
     </Grid>
 </Window>
